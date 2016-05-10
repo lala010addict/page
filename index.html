@@ -1,10 +1,58 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-<script src="main.js"></script>
+<html ng-app="myApp" ng-cloak>
 
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.min.css">
+</head>
+
+<body>
+    <div ng-controller="main">
+        <div class="row">
+            <div class="medium-4 columns">
+                <div class="media-object">
+                    <div class="media-object-section">
+                        <img class="thumbnail" src="{{panel1Url}}">
+                    </div>
+                    <div class="media-object-section">
+                        <h5>{{panel1Name}}</h5>
+                        <p>{{panel1Des}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="medium-4 columns">
+                <div class="media-object">
+                    <div class="media-object-section">
+                        <img class="thumbnail" src="{{panel2Url}}">
+                    </div>
+                    <div class="media-object-section">
+                        <h5>{{panel2Name}}</h5>
+                        <p>{{panel2Des}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="medium-4 columns">
+                <div class="media-object">
+                    <div class="media-object-section">
+                        <img class="thumbnail" src="{{panel3Url}}">
+                    </div>
+                    <div class="media-object-section">
+                        <h5>{{panel3Name}}</h5>
+                        <p>{{panel3Des}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row small-up-3 medium-up-4 large-up-8">
+            <div class="column" ng-repeat="x in data">
+                <img src="{{x.url}}" ng-click="showProfile(x.name, x.des, x.url)">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.2/angular.min.js"></script>
+    <script src="data.json"></script>
+    <script src="main.js"></script>
 </body>
+
 </html>
