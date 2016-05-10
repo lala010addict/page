@@ -1,4 +1,4 @@
-angular.module('myApp', [])
+angular.module('myApp', ['ngAnimate'])
     .controller('main', ['$scope', function($scope) {
         $scope.data = data
         $scope.panel1Name = $scope.data[0].name
@@ -12,26 +12,20 @@ angular.module('myApp', [])
         $scope.panel3Url = $scope.data[2].url
 
         $scope.showProfile = function(name, url, des) {
- $scope.panel1Name = name
-        $scope.panel1Des = url
-        $scope.panel1Url = des
-
+            $scope.panel3Name = $scope.panel2Name
+            $scope.panel3Des = $scope.panel2Des
+            $scope.panel3Url = $scope.panel2Url
+            $scope.panel2Name = $scope.panel1Name
+            $scope.panel2Des = $scope.panel1Des
+            $scope.panel2Url = $scope.panel1Url
+            $scope.panel1Name = name;
+            $scope.panel1Des = des;
+            $scope.panel1Url = url;
 
         }
 
 
-
-
-
     }]);
-
-
-
-
-
-
-
-
 
 
 

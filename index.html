@@ -11,7 +11,7 @@
     <div ng-controller="main">
         <div class="row">
             <div class="medium-4 columns">
-                <div class="media-object">
+                <div class="media-object" ng-click="move()" id='panel1'>
                     <div class="media-object-section">
                         <img class="thumbnail" src="{{panel1Url}}">
                     </div>
@@ -46,11 +46,12 @@
         </div>
         <div class="row small-up-3 medium-up-4 large-up-8">
             <div class="column" ng-repeat="x in data">
-                <img src="{{x.url}}" ng-click="showProfile(x.name, x.des, x.url)">
+                <img src="{{x.url}}" ng-click="showProfile(x.name, x.url, x.des)">
             </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular-animate.min.js"></script>
     <script src="data.json"></script>
     <script src="main.js"></script>
 </body>

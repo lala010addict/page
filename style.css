@@ -7,8 +7,10 @@
     display: none !important;
 }
 
+.column {
+    padding-bottom: 15px;
+}
 
-
-.column{
-  padding-bottom: 15px;
+.row {
+  padding-top: 50px;
 }
